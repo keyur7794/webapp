@@ -4,8 +4,9 @@ console.log(__dirname+'/../public');
 
 console.log(publicpath);
 const express =require('express');
+const port=process.env.PORT||3000;
 
 var app=express();
 app.use(express.static(publicpath));
 
-app.listen(3000,()=>console.log('server is up on 3000'));
+app.listen(port,()=>console.log(`server is on port ${port}`));
